@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\CasaController;
+use App\Http\Controllers\CasaController2;
 use App\Http\Controllers\BichoController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -42,7 +42,7 @@ Route::post(
 
 Route::get(
     '/casas',
-    [CasaController::class, 'verCasas']
+    [CasaController2::class, 'verCasas']
 );
 
 Route::post(
@@ -50,5 +50,5 @@ Route::post(
     /* function(Request $sol){
         return response()->json(['msg'=>'ok', 'sol'=>$sol->ubicacion], 200);
     } */
-    [CasaController::class, 'nueva']
+    [CasaController2::class, 'nueva']
 );
