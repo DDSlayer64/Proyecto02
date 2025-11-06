@@ -40,7 +40,7 @@ class RegistroController extends Controller
                 'estado'=>'OK',
                 'mensaje'=>'Usuario registrado correctamente',
                 'user'=>$user,
-                'destino'=>'casas'
+                'destino'=>'usuario'
             ], 200);
             //Si todo salio bien manda esa respuesta al frontend
     }
