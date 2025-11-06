@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Casa;
 use App\Models\Bicho;
 use Illuminate\Http\Request;
 

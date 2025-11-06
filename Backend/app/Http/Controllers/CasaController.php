@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Casa;
 use Illuminate\Http\Request;
 
-class CasasController extends Controller
+class CasaController extends Controller
 {
     /**
      * Permite obtener el listado completo de Bichos de la base de datos

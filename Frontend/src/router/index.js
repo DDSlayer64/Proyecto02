@@ -3,6 +3,11 @@ import NuevoBicho from "../views/NuevoBicho.vue";
 import VerBichos from "../views/VerBichos.vue";
 import NuevaCasa from "../views/NuevaCasa.vue";
 import VerCasas from "../views/VerCasas.vue";
+import RegistroUsuario from "../views/RegistroUsuario.vue";
+import Usuario from "../views/Usuario.vue";
+import Notificaciones from "../views/Notificaciones.vue";
+import CrearNotificacion from "../views/CrearNotificacion.vue";
+import InicioS from "../views/InicioS.vue";
 
 const router = createRouter(
     {
@@ -33,6 +38,31 @@ const router = createRouter(
             },
             {
                 path: '/casa/:id'
+            },
+            {
+                path: '/registro',
+                component: RegistroUsuario,
+                name: 'Registro'
+            },
+            {
+                path: '/usuario',
+                component: Usuario,
+                name: 'Usuario'
+            },
+            {
+                path: '/notificaciones',
+                component: Notificaciones,
+                name: 'Notifiaciones'
+            },
+            {
+                path: '/notificaciones/crear',
+                component: CrearNotificacion,
+                name: 'crearNotificacion'
+            },
+            {
+                path: '/login',
+                component: InicioS,
+                name: 'InicioS'
             }
         ]
     }
