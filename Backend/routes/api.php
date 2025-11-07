@@ -2,8 +2,6 @@
 
 use App\Http\Controllers\InicioSController;
 use App\Http\Controllers\RegistroController;
-use App\Http\Controllers\CasaController2;
-use App\Http\Controllers\BichoController;
 use App\Http\Controllers\InfoUController;
 use App\Http\Controllers\NotificacionController;
 use Illuminate\Http\Request;
@@ -25,16 +23,6 @@ Route::get(
     }
 );
 
-Route::get(
-    '/bichos',
-    [BichoController::class, 'verTodos']
-);
-
-Route::post(
-    '/bicho/nuevo',
-    [BichoController::class,'nuevo']
-);
-
 Route::post(
     'ingresar',
     function () {
@@ -44,20 +32,6 @@ Route::post(
         ], 200);
     }
 );
-
-Route::get(
-    '/casas',
-    [CasaController2::class, 'verCasas']
-);
-
-Route::post(
-    '/casa/nueva',
-    /* function(Request $sol){
-        return response()->json(['msg'=>'ok', 'sol'=>$sol->ubicacion], 200);
-    } */
-    [CasaController2::class, 'nueva']
-);
-
 
 Route::middleware('auth:sanctum')->get(
     '/usuario',

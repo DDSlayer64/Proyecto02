@@ -11,7 +11,7 @@ const DocumentoIdentidad = ref('')
 const password = ref('')
 
 if (almacenSesion.sesionIniciada) {
-    router.push({name:'casas'})
+    router.push({name:'usuario'})
 }
 
 

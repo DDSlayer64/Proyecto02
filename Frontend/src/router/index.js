@@ -1,8 +1,4 @@
 import { createRouter, createWebHistory } from "vue-router";
-import NuevoBicho from "../views/NuevoBicho.vue";
-import VerBichos from "../views/VerBichos.vue";
-import NuevaCasa from "../views/NuevaCasa.vue";
-import VerCasas from "../views/VerCasas.vue";
 import RegistroUsuario from "../views/RegistroUsuario.vue";
 import Usuario from "../views/Usuario.vue";
 import Notificaciones from "../views/Notificaciones.vue";
