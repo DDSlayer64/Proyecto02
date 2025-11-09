@@ -10,32 +10,6 @@ const router = createRouter(
         history: createWebHistory(import.meta.env.BASE_URL),
         routes: [
             {
-                path: '/bicho/nuevo',
-                component: NuevoBicho,
-                name: 'nuevoBicho'
-            },
-            {
-                path: '/bicho/:id'
-            },
-            {
-                path: '/bichos',
-                component: VerBichos,
-                name: 'VerBichos'
-            },
-            {
-                path: '/casas',
-                component: VerCasas,
-                name: 'VerCasas'
-            },
-            {
-                path: '/casa/nueva',
-                component: NuevaCasa,
-                name: 'NuevaCasa'
-            },
-            {
-                path: '/casa/:id'
-            },
-            {
                 path: '/registro',
                 component: RegistroUsuario,
                 name: 'Registro'

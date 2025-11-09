@@ -2,6 +2,18 @@ import { defineStore } from "pinia";
 import instanciaAxios from "../api/api";
 import router from "../router";
 
+export async function cerrarSesion() {
+  try {
+    const respuesta = await instanciaAxios.post('/cerrarSesion');
+    console.log(respuesta.data.mensaje);
+
+    // Redirigís al login
+    window.location.href = '/login';
+  } catch (error) {
+    console.error('Error al cerrar sesión:', error);
+  }
+}
+
 export const useAlmacenSesion = defineStore("sesion", {
   state: () => ({
     usuario: null,
@@ -83,7 +95,7 @@ export const useAlmacenSesion = defineStore("sesion", {
 
       try {
         await instanciaAxios.csrf.get("");
-        const respuesta = await instanciaAxios.normal.post("usuarios/cerrarSesion");
+        const respuesta = await instanciaAxios.normal.post("cerrarSesion");
         console.log("Sesión cerrada:", respuesta.data);
 
         router.push({ name: "inicioSesion" });

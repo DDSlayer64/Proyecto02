@@ -78,7 +78,7 @@ const registrar = async () => {
             <div class="w-[60%] h-[70vh] bg-blue-500 p-10 flex flex-col justify-center rounded-l-xl">
 
             <h3 class="text-4xl rounded-xl text-white font-bold mb-6">Registrarse</h3>
-            <form action="" id="formulario" class="flex flex-col space-y-00.1">
+            <form action="" id="formulario" class="flex flex-col">
 
             <input type="text" placeholder="Nombre completo" id="nombreUsuario" 
             class="p-3 w-full rounded-xl bg-white text-lg text-black focus:outline-none focus:ring-2 focus:ring-blue-300"

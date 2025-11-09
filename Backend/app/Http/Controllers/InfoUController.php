@@ -12,12 +12,13 @@ class InfoUController extends Controller
         $user = $request->user();
         return response()->json([
             'estado' => 'OK',
-            'usuario' => $user/* [
+            'usuario' => [
                 'name' => $user->name,
+                'email'=> $user->email,
                 'CI' => $user->DocumentoIdentidad,
                 'Rol' => $user->Rol
 
-                ] */
+                ]
 
         ],200);
     }
