@@ -27,7 +27,7 @@ async function cerrarSesion() {
     </router-link>
 
     <!-- Productos -->
-    <router-link to="productos" class="flex justify-center items-center text-2xl hover:bg-blue-800 px-2 h-[90%] w-[5%] bg-blue-700 m-0.5 text-white border-2 border-gray-300">
+    <router-link to="stock" class="flex justify-center items-center text-2xl hover:bg-blue-800 px-2 h-[90%] w-[5%] bg-blue-700 m-0.5 text-white border-2 border-gray-300">
       <FontAwesomeIcon :icon="faBoxOpen" />
     </router-link>
 

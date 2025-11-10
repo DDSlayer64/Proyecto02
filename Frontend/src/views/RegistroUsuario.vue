@@ -78,36 +78,36 @@ const registrar = async () => {
             <div class="w-[60%] h-[70vh] bg-blue-500 p-10 flex flex-col justify-center rounded-l-xl">
 
             <h3 class="text-4xl rounded-xl text-white font-bold mb-6">Registrarse</h3>
-            <form action="" id="formulario" class="flex flex-col">
+            <form action="" id="formulario" class="flex flex-col space-y-00.1">
 
             <input type="text" placeholder="Nombre completo" id="nombreUsuario" 
-            class="p-3 w-full rounded-xl bg-white text-lg text-black focus:outline-none focus:ring-2 focus:ring-blue-300"
+            class=" w-full rounded-xl bg-white text-lg text-black focus:outline-none focus:ring-2 focus:ring-blue-300"
                 v-model="newUser.name"> 
             <br>
 
             <input type="text" placeholder="Correo electronico" id="emailUser" 
-            class="p-3 w-full rounded-xl bg-white text-lg text-black focus:outline-none focus:ring-2 focus:ring-blue-300" 
+            class=" w-full rounded-xl bg-white text-lg text-black focus:outline-none focus:ring-2 focus:ring-blue-300" 
             v-model="newUser.email">
             <br>
 
             <input type="text" placeholder="C.I." id="diUser" 
-            class="p-3 w-full rounded-xl bg-white text-lg text-black focus:outline-none focus:ring-2 focus:ring-blue-300"
+            class=" w-full rounded-xl bg-white text-lg text-black focus:outline-none focus:ring-2 focus:ring-blue-300"
             v-model="newUser.DocumentoIdentidad">
             <br>
 
             <select name="Rol" placeholder="Rol" id="Rol" v-model="newUser.Rol" 
-            class="p-3 w-full rounded-xl bg-white text-lg text-black focus:outline-none focus:ring-2 focus:ring-blue-300">
+            class=" w-full rounded-xl bg-white text-lg text-black focus:outline-none focus:ring-2 focus:ring-blue-300">
                 <option value="Administrador">Administrador</option>
                 <option value="Empleado">Empleado</option>
             </select><br>
 
             <input type="password" placeholder="Contraseña" id="passwordUser" 
-            class="p-3 w-full rounded-xl bg-white text-lg text-black focus:outline-none focus:ring-2 focus:ring-blue-300"
+            class=" w-full rounded-xl bg-white text-lg text-black focus:outline-none focus:ring-2 focus:ring-blue-300"
             v-model="newUser.password">
             <br>
 
             <input type="Password" placeholder="Confirmar contraseña" id="confirmPassword" 
-            class="p-3 w-full rounded-xl bg-white text-lg text-black focus:outline-none focus:ring-2 focus:ring-blue-300"
+            class=" w-full rounded-xl bg-white text-lg text-black focus:outline-none focus:ring-2 focus:ring-blue-300"
             v-model="newUser.confirmPassword">
             <br>
             <p>{{ mensaje }}</p>
