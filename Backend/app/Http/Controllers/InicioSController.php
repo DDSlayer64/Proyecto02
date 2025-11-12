@@ -28,7 +28,7 @@ class InicioSController extends Controller
                     'estado' => 'OK',
                     'mensaje' => 'Inicio de sesion exitoso',
                     'usuario' => $usuario,
-                    'destino' => 'VerCasas'
+                    'destino' => 'Usuario'
                 ],
                 200
             );

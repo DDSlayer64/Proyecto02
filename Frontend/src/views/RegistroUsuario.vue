@@ -2,6 +2,10 @@
     import { ref, reactive } from 'vue';
     import instanciaAxios from '../api/api';
 
+    // Ref para controlar la visibilidad de las contraseñas
+    const showPassword = ref(false);
+    const showConfirmPassword = ref(false);
+
     
     function validatePassword(password){
         const longitudMin = /^.{8,}$/
@@ -31,6 +35,15 @@
 
     const mensaje = ref('')
 
+    // Función para alternar la visibilidad de la contraseña
+    const togglePasswordVisibility = () => {
+        showPassword.value = !showPassword.value;
+    }
+
+    // Función para alternar la visibilidad de la confirmación de contraseña
+    const toggleConfirmPasswordVisibility = () => {
+        showConfirmPassword.value = !showConfirmPassword.value;
+    }
     
 
     const newUser = reactive({
@@ -81,34 +94,62 @@ const registrar = async () => {
             <form action="" id="formulario" class="flex flex-col space-y-00.1">
 
             <input type="text" placeholder="Nombre completo" id="nombreUsuario" 
-            class=" w-full rounded-xl bg-white text-lg text-black focus:outline-none focus:ring-2 focus:ring-blue-300"
+            class=" w-full p-3 rounded-xl bg-white text-lg text-black focus:outline-none focus:ring-2 focus:ring-blue-300"
                 v-model="newUser.name"> 
             <br>
 
             <input type="text" placeholder="Correo electronico" id="emailUser" 
-            class=" w-full rounded-xl bg-white text-lg text-black focus:outline-none focus:ring-2 focus:ring-blue-300" 
+            class=" w-full p-3 rounded-xl bg-white text-lg text-black focus:outline-none focus:ring-2 focus:ring-blue-300" 
             v-model="newUser.email">
             <br>
 
             <input type="text" placeholder="C.I." id="diUser" 
-            class=" w-full rounded-xl bg-white text-lg text-black focus:outline-none focus:ring-2 focus:ring-blue-300"
+            class=" w-full p-3 rounded-xl bg-white text-lg text-black focus:outline-none focus:ring-2 focus:ring-blue-300"
             v-model="newUser.DocumentoIdentidad">
             <br>
 
             <select name="Rol" placeholder="Rol" id="Rol" v-model="newUser.Rol" 
-            class=" w-full rounded-xl bg-white text-lg text-black focus:outline-none focus:ring-2 focus:ring-blue-300">
+            class=" w-full p-3 rounded-xl bg-white text-lg text-black focus:outline-none focus:ring-2 focus:ring-blue-300">
                 <option value="Administrador">Administrador</option>
                 <option value="Empleado">Empleado</option>
             </select><br>
 
-            <input type="password" placeholder="Contraseña" id="passwordUser" 
-            class=" w-full rounded-xl bg-white text-lg text-black focus:outline-none focus:ring-2 focus:ring-blue-300"
-            v-model="newUser.password">
+            <div class="relative">
+                <input 
+                    :type="showPassword ? 'text' : 'password'" 
+                    placeholder="Contraseña" 
+                    id="passwordUser" 
+                    class="p-3 w-full rounded-xl bg-white text-lg text-black focus:outline-none focus:ring-2 focus:ring-blue-300 pr-10"
+                    v-model="newUser.password"
+                >
+                <button 
+                    type="button"
+                    @click="togglePasswordVisibility"
+                    class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-gray-700 focus:outline-none"
+                >
+                    <span v-if="showPassword">👁️</span>
+                    <span v-else>👁️‍🗨️</span>
+                </button>
+            </div>
             <br>
 
-            <input type="Password" placeholder="Confirmar contraseña" id="confirmPassword" 
-            class=" w-full rounded-xl bg-white text-lg text-black focus:outline-none focus:ring-2 focus:ring-blue-300"
-            v-model="newUser.confirmPassword">
+            <div class="relative">
+                <input 
+                    :type="showConfirmPassword ? 'text' : 'password'" 
+                    placeholder="Confirmar contraseña" 
+                    id="confirmPassword" 
+                    class="p-3 w-full rounded-xl bg-white text-lg text-black focus:outline-none focus:ring-2 focus:ring-blue-300 pr-10"
+                    v-model="newUser.confirmPassword"
+                >
+                <button 
+                    type="button"
+                    @click="toggleConfirmPasswordVisibility"
+                    class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-gray-700 focus:outline-none"
+                >
+                    <span v-if="showConfirmPassword">👁️</span>
+                    <span v-else>👁️‍🗨️</span>
+                </button>
+            </div>
             <br>
             <p>{{ mensaje }}</p>
          
