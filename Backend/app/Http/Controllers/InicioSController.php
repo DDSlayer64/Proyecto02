@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use illuminate\Support\Facades\Auth;
-use illuminate\Support\Facades\hash;
+use lluminate\Support\Facades\Auth;
+use lluminate\Support\Facades\Hash;
 
 class InicioSController extends Controller
 {
